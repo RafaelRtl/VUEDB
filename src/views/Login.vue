@@ -1,8 +1,9 @@
 <template>
   <div class="login">
+    <h3>Sign In</h3>
     <input type="text" placeholder="Email"><br>
     <input type="password" placeholder="Password"><br>
-    <button>Conexión</button>
+    <button @click="login">Conexión</button>
     <p>¿No tienes cuenta? <router-link to="/sign-up"> Crea una </router-link> </p>
   </div>
 </template>
@@ -13,7 +14,11 @@
     data () {
       return {};
     },
-    methods: {}
+    methods: {
+      login: function() {
+        this.$router.replace('home');
+      }
+    }
   }
 </script>
 
